@@ -15,6 +15,24 @@ with additional info about the departure details.
 Second step is using `order_cards` function on the list of cards. This function will separate
 the list into two lists by obtaining 'start' and 'end' locations.
 
+Example:
+
+    >>> from main import order_cards
+    >>> cards = [
+        {"start": "Warsaw", "end": "Cracow", "info": {"type": "plane", "gate": "7A"}},
+        {"start": "Wroclaw", "end": "Poznan", "info": {"type": "train", "gate": "3"}},
+        {"start": "Poznan", "end": "Warsaw", "info": {"type": "bus", "gate": "F"}},
+    ]
+
+    >>> print(order_cards(cards))
+
+    
+    [
+        {'start': 'Wroclaw', 'end': 'Poznan', 'info': {'type': 'train', 'gate': '3'}},
+        {'start': 'Poznan', 'end': 'Warsaw', 'info': {'type': 'bus', 'gate': 'F'}},
+        {'start': 'Warsaw', 'end': 'Cracow', 'info': {'type': 'plane', 'gate': '7A'}},
+    ]
+
 The format of returned list is exactly the same as input list.
 
 To run tests:
