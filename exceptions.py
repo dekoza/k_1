@@ -1,0 +1,2 @@
+class TripError(RuntimeError):
+    pass
