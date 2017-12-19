@@ -35,6 +35,10 @@ Example:
 
 The format of returned list is exactly the same as input list.
 
+To run an example as in the assignment, simply run:
+
+$ python3 main.py
+
 To run tests:
 
 $ pip install -r requirements.txt
